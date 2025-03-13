@@ -70,7 +70,6 @@ class BaseRouterApp extends StatelessWidget {
   Widget build(final BuildContext context) {
     return MaterialApp.router(
       routerConfig: GoRouter(
-        initialLocation: '/firstScreen',
         routes: _routes,
       ),
     );
