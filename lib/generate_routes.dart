@@ -37,6 +37,7 @@ class AppRoutes {
 }
 
 String toCamelCase(String path) {
+  if (path == '/') return "initialPath";
   String cleanPath = path.startsWith("/") ? path.substring(1) : path;
 
   List<String> parts = cleanPath.split(RegExp(r'[/\-]'));
