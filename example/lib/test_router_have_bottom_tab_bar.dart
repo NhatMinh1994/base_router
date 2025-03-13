@@ -104,6 +104,10 @@ class RouterHaveBottomTabBar extends IModuleRouter {
   @override
   List<RouteBase> router() {
     return [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const HomeScreen(),
+      ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) =>
             ScaffoldWithNavBar(navigationShell),

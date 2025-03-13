@@ -36,9 +36,11 @@ packages:
   base_router:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "32d8685376bca8ef438c81296846f4e9fcb6af1f"
+      url: "https://github.com/NhatMinh1994/base_router"
+    source: git
     version: "0.0.1"
   boolean_selector:
     dependency: transitive
@@ -171,16 +173,20 @@ packages:
   feature_1:
     dependency: "direct main"
     description:
-      path: "plugins/feature_1"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "3d84494fe54f73fcce40b50e26663eb3599ceda7"
+      url: "https://github.com/NhatMinh1994/first_feature_module"
+    source: git
     version: "0.0.1"
   feature_2:
     dependency: "direct main"
     description:
-      path: "plugins/feature_2"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "015508ec2f67dd09f81890fc922c55dd6b0a2b8d"
+      url: "https://github.com/NhatMinh1994/feature_second_module"
+    source: git
     version: "0.0.1"
   ffi:
     dependency: transitive

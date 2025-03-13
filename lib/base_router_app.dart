@@ -10,8 +10,9 @@ final service = GetIt.instance;
 class BaseRouterApp extends StatelessWidget {
   final List<IModuleRouter> _modules;
   final List<RouteBase> _routes = [];
-
-  BaseRouterApp({required List<IModuleRouter> modules, super.key})
+  final bool? isWritePath;
+  BaseRouterApp(
+      {required List<IModuleRouter> modules, super.key, this.isWritePath})
       : _modules = modules {
     for (var module in _modules) {
       module.init(service);
@@ -23,9 +24,15 @@ class BaseRouterApp extends StatelessWidget {
         );
       }
     }
-    String content = _extractPaths(_routes).join('\n');
-    _writeFile(content);
+    handleToWritePath();
   }
+  void handleToWritePath() {
+    if (isWritePath == true) {
+      String content = _extractPaths(_routes).join('\n');
+      _writeFile(content);
+    }
+  }
+
   bool hasDuplicatePaths(IModuleRouter module) {
     final pathsOfModule = _extractPaths(module.router());
     final totalOfPaths = _extractPaths(_routes);

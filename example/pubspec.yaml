@@ -34,7 +34,8 @@ dependencies:
   go_router: ^14.6.2
   get_it: 7.2.0
   base_router:
-    path: ..
+    git:
+      url: https://github.com/NhatMinh1994/base_router
   feature_1:
     git:
       url: https://github.com/NhatMinh1994/first_feature_module
